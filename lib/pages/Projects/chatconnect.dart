@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:portfolio/providers/scroll_provider.dart';
+import 'package:provider/provider.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
 class ChatConnectPage extends StatelessWidget {
@@ -7,6 +9,10 @@ class ChatConnectPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double height = MediaQuery.of(context).size.height;
+    ScrollProvider scrollProvider =
+        Provider.of<ScrollProvider>(context, listen: false);
+    scrollProvider.appBarHeight = height / 13.15 < 60 ? 60 : height / 13.15;
     return ResponsiveScaledBox(
       width: 1048,
       child: Scaffold(
@@ -15,7 +21,7 @@ class ChatConnectPage extends StatelessWidget {
           elevation: 1,
           shadowColor: Colors.black,
           backgroundColor: Colors.lightBlueAccent,
-          toolbarHeight: 80,
+          toolbarHeight: 40,
           leading: IconButton(
             icon: const Icon(Icons.arrow_back),
             onPressed: () {
@@ -24,7 +30,17 @@ class ChatConnectPage extends StatelessWidget {
           ),
           title: const Text(
             'ChatConnect',
-            style: TextStyle(color: Colors.white),
+            style: TextStyle(color: Colors.black),
+          ),
+        ),
+        body: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 30.0),
+          child: Container(
+            width: double.infinity,
+            height: height,
+            child: Image.asset(
+                'lib/assets/images/chat_connect/chat_connect.png',
+                fit: BoxFit.fill),
           ),
         ),
       ),
