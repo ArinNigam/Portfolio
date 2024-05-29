@@ -38,8 +38,7 @@ class ChatConnectPage extends StatelessWidget {
           child: Container(
             width: double.infinity,
             height: height,
-            child: Image.asset(
-                'lib/assets/images/chat_connect/chat_connect.png',
+            child: Image.asset('lib/assets/projects_images/chat_connect.png',
                 fit: BoxFit.fill),
           ),
         ),

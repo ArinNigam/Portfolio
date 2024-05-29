@@ -39,8 +39,7 @@ class SmartInstiPage extends StatelessWidget {
           child: Container(
             width: 2 * height,
             height: height,
-            child: Image.asset(
-                'lib/assets/images/foss_overflow/smart_insti.png',
+            child: Image.asset('lib/assets/projects_images/smart_insti.png',
                 fit: BoxFit.fill),
           ),
         ),
