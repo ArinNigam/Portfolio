@@ -281,7 +281,7 @@ class HomePage extends StatelessWidget {
                     margin: const EdgeInsets.only(bottom: 25, right: 25),
                     child: FloatingActionButton(
                       onPressed: scrollProvider.scrollToTop,
-                      backgroundColor: Colors.redAccent,
+                      backgroundColor: Colors.lightBlueAccent,
                       child: const Icon(
                         Icons.arrow_upward,
                         size: 30,
