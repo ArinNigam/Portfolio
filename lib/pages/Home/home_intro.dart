@@ -144,7 +144,7 @@ class HomeIntro extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  'I am a tech entusiast about AI and Software Development',
+                  'I am a tech enthusiast about AI and Software Development',
                   style: GoogleFonts.bioRhyme(
                       fontWeight: FontWeight.bold,
                       fontSize: 30,
