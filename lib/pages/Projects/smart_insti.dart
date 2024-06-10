@@ -36,11 +36,279 @@ class SmartInstiPage extends StatelessWidget {
         ),
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 30.0),
-          child: Container(
-            width: 2 * height,
-            height: height,
-            child: Image.asset('lib/assets/projects_images/smart_insti.png',
-                fit: BoxFit.fill),
+          child: SingleChildScrollView(
+            scrollDirection: Axis.vertical,
+            child: Column(
+              children: [
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: SizedBox(
+                          height: height,
+                          child: Image.asset(
+                              'lib/assets/projects_images/smart_insti/admin_auth.png',
+                              fit: BoxFit.fitHeight),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: SizedBox(
+                          height: height,
+                          child: Image.asset(
+                              'lib/assets/projects_images/smart_insti/admin_dashboard.png',
+                              fit: BoxFit.fitHeight),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(
+                  height: 100,
+                ),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: SizedBox(
+                          height: height,
+                          child: Image.asset(
+                              'lib/assets/projects_images/smart_insti/user_auth.png',
+                              fit: BoxFit.fitHeight),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: SizedBox(
+                          height: height,
+                          child: Image.asset(
+                              'lib/assets/projects_images/smart_insti/user_dashboard.png',
+                              fit: BoxFit.fitHeight),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(
+                  height: 100,
+                ),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: SizedBox(
+                          height: height,
+                          child: Image.asset(
+                              'lib/assets/projects_images/smart_insti/add_student.png',
+                              fit: BoxFit.fitHeight),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: SizedBox(
+                          height: height,
+                          child: Image.asset(
+                              'lib/assets/projects_images/smart_insti/multi_choice_roles.png',
+                              fit: BoxFit.fitHeight),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: SizedBox(
+                          height: height,
+                          child: Image.asset(
+                              'lib/assets/projects_images/smart_insti/year_picker.png',
+                              fit: BoxFit.fitHeight),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(
+                  height: 100,
+                ),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: SizedBox(
+                          height: height,
+                          child: Image.asset(
+                              'lib/assets/projects_images/smart_insti/add_faculty.png',
+                              fit: BoxFit.fitHeight),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: SizedBox(
+                          height: height,
+                          child: Image.asset(
+                              'lib/assets/projects_images/smart_insti/view_faculties.png',
+                              fit: BoxFit.fitHeight),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(
+                  height: 100,
+                ),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: SizedBox(
+                          height: height,
+                          child: Image.asset(
+                              'lib/assets/projects_images/smart_insti/add_course.png',
+                              fit: BoxFit.fitHeight),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: SizedBox(
+                          height: height,
+                          child: Image.asset(
+                              'lib/assets/projects_images/smart_insti/view_courses.png',
+                              fit: BoxFit.fitHeight),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(
+                  height: 100,
+                ),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: SizedBox(
+                          height: height,
+                          child: Image.asset(
+                              'lib/assets/projects_images/smart_insti/add_rooms.png',
+                              fit: BoxFit.fitHeight),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: SizedBox(
+                          height: height,
+                          child: Image.asset(
+                              'lib/assets/projects_images/smart_insti/view_room_vacancy.png',
+                              fit: BoxFit.fitHeight),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(
+                  height: 100,
+                ),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: SizedBox(
+                          height: height,
+                          child: Image.asset(
+                              'lib/assets/projects_images/smart_insti/add_menu.png',
+                              fit: BoxFit.fitHeight),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: SizedBox(
+                          height: height,
+                          child: Image.asset(
+                              'lib/assets/projects_images/smart_insti/view_mess_menu.png',
+                              fit: BoxFit.fitHeight),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: SizedBox(
+                          height: height,
+                          child: Image.asset(
+                              'lib/assets/projects_images/smart_insti/view_menu.png',
+                              fit: BoxFit.fitHeight),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(
+                  height: 100,
+                ),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: SizedBox(
+                          height: height,
+                          child: Image.asset(
+                              'lib/assets/projects_images/smart_insti/view_lost_and_found.png',
+                              fit: BoxFit.fitHeight),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: SizedBox(
+                          height: height,
+                          child: Image.asset(
+                              'lib/assets/projects_images/smart_insti/chatroom.png',
+                              fit: BoxFit.fitHeight),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(
+                  height: 100,
+                ),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: SizedBox(
+                          height: height,
+                          child: Image.asset(
+                              'lib/assets/projects_images/smart_insti/timetable_1.png',
+                              fit: BoxFit.fitHeight),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: SizedBox(
+                          height: height,
+                          child: Image.asset(
+                              'lib/assets/projects_images/smart_insti/timetable_2.png',
+                              fit: BoxFit.fitHeight),
+                        ),
+                      ),
+                    ],
+                  ),
+                )
+              ],
+            ),
           ),
         ),
       ),
