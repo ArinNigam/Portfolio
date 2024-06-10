@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => TechStackPageProvider(context)),
       ],
       child: MaterialApp.router(
-        title: "Portfolio Website",
+        title: "Portfolio",
         theme: ThemeData(
           scaffoldBackgroundColor: Colors.black12,
           primarySwatch: Colors.blue,
