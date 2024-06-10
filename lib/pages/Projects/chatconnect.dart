@@ -35,7 +35,7 @@ class ChatConnectPage extends StatelessWidget {
         ),
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 30.0),
-          child: Container(
+          child: SizedBox(
             width: double.infinity,
             height: height,
             child: Image.asset('lib/assets/projects_images/chat_connect.png',

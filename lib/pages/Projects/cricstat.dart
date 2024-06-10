@@ -35,7 +35,7 @@ class CricstatPage extends StatelessWidget {
         ),
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 30.0),
-          child: Container(
+          child: SizedBox(
             width: 2 * height,
             height: height,
             child: Image.asset('lib/assets/projects_images/cricstat.png',
