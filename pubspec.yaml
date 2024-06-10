@@ -77,6 +77,8 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - lib/assets/projects_images/
+    - lib/assets/projects_images/socio/
+    - lib/assets/projects_images/smart_insti/
     - lib/assets/images/
     - lib/assets/icons/
     - lib/assets/texts/
