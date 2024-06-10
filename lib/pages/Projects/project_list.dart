@@ -38,8 +38,8 @@ class ProjectList extends StatelessWidget {
             children: [
               for (Project i in projectProvider.projects)
                 SizedBox(
-                  width: width / 3.948,
-                  height: max(530, width / 2.63733333),
+                  width: width / 5.2,
+                  height: max(640, width / 2),
                   child: Container(
                     decoration: BoxDecoration(
                         color: Colors.lightBlue[50],
@@ -63,10 +63,20 @@ class ProjectList extends StatelessWidget {
                                 fontWeight: FontWeight.bold),
                           ),
                         ),
-                        Text(
-                          i.briefDescription,
-                          style:
-                              GoogleFonts.sairaCondensed(fontSize: width / 90),
+                        Padding(
+                          padding: const EdgeInsets.all(16.0),
+                          child: Text(
+                            i.briefDescription.toUpperCase(),
+                            style: GoogleFonts.sairaCondensed(
+                                fontSize: width / 90),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: SelectableText(
+                            i.description,
+                            style: GoogleFonts.sahitya(fontSize: width / 90),
+                          ),
                         ),
                         Expanded(
                           child: Align(
