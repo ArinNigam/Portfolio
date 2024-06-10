@@ -64,9 +64,20 @@ class ProjectPageProvider extends ChangeNotifier {
       pagePath: '/home/smart_insti',
       briefDescription: """For the Students and Faculty""",
       description:
-          'This app aims to solve the day-to-day problems that students and faculty face in IIT Bhilai and aims to consolidate a lot of useful applications into single app. This could include features like Time Table, Classroom Vacancy, Lost and Found, Chatrooms on various topics like Internet Issues. It could also have a broadcast feature which would be very useful in emergency situations.',
+          'This app aims to solve the day-to-day problems that students and faculty face in Colleges and aims to consolidate a lot of useful applications into single app. This could include features like Time Table, Classroom Vacancy, Lost and Found, Chatrooms on various topics like Internet Issues. It could also have a broadcast feature which would be very useful in emergency situations.',
       primaryColor: Colors.blue,
       secondaryColor: Colors.blueAccent,
+    ),
+    Project(
+      title: "Socio".toUpperCase(),
+      image: Image.asset('lib/assets/images/socio.png'),
+      source: "https://github.com/ArinNigam/Socio",
+      pagePath: '/home/socio',
+      briefDescription: """Connect with your Friends and Family""",
+      description:
+          """Socio is a social networking app designed to connect you with your friends and family. It offers a user-friendly interface for seamless communication and interaction. With Socio, you can share updates, photos and stay updated on what's happening in your social circle. It also includes features for group chats, event planning, and more, making it a comprehensive platform for all your social needs.""",
+      primaryColor: Colors.purple,
+      secondaryColor: Colors.purpleAccent,
     ),
     Project(
       title: "Cricstat".toUpperCase(),
@@ -74,7 +85,8 @@ class ProjectPageProvider extends ChangeNotifier {
       source: "https://github.com/ArinNigam/cricstat",
       pagePath: '/home/cricstat',
       briefDescription: """Cricket Fans Unite!""",
-      description: '',
+      description:
+          'CricStat is a cricket statistics app that provides you with cricket scores, and statistics. Stay updated with live scores, player stats, team rankings, and more. Whether you’re a cricket enthusiast or just a casual fan, CricStat is your one-stop destination for all things cricket!',
       primaryColor: Colors.red,
       secondaryColor: Colors.redAccent,
     ),
@@ -118,7 +130,7 @@ class ProjectPageProvider extends ChangeNotifier {
       pagePath: '/home/dsa_grind',
       briefDescription: """Daily DSA Practice""",
       description:
-          'DSA Grind is your go-to platform for mastering Data Structures and Algorithms through daily practice. With a wide range of questions and topics, DSA Grind helps you build a strong foundation in DSA and ace your coding interviews. Whether you’re a beginner or an expert, DSA Grind offers a variety of questions to challenge and enhance your problem-solving skills. Get started today and take your coding skills to the next level!',
+          'DSA Grind is your go-to platform for mastering Data Structures and Algorithms through daily practice. With a wide range of questions and topics, It helps you build a strong foundation in DSA and ace your coding interviews. Whether you’re a beginner or an expert, It offers a variety of questions to challenge and enhance your problem-solving skills!',
       primaryColor: Colors.teal,
       secondaryColor: Colors.tealAccent,
     ),
