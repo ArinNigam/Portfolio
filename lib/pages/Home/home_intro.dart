@@ -29,7 +29,7 @@ class HomeIntro extends StatelessWidget {
     String fullscreen = '1'; // Fullscreen view
     String to = 'arin.nigam@gmail.com'; // Receiver's email
     String subject = 'Enquiry%20about'; // Subject of email
-    String body = 'HeyR%20Arin,%20'; // Body of email
+    String body = 'Hello%20Arin,%20'; // Body of email
 
     String link =
         'https://mail.google.com/mail/?view=$view&fs=$fullscreen&to=$to&su=$subject&body=$body';
