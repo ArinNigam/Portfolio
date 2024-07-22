@@ -69,6 +69,17 @@ class ProjectPageProvider extends ChangeNotifier {
       secondaryColor: Colors.blueAccent,
     ),
     Project(
+      title: "Talawa".toUpperCase(),
+      image: Image.asset('lib/assets/images/talawa.png'),
+      source: "https://github.com/PalisadoesFoundation/talawa",
+      pagePath: '/home/talawa',
+      briefDescription: """Easy Community Organization Management""",
+      description:
+          """It is an Open Source Project which aims to provide a platform to manage the community organizations. It provides features like managing members, events, tasks and discussions. It also provides a platform for the members to interact with each other. I have contributed during the pre GSoC'24 period. Here is the link to my proposal.""",
+      primaryColor: Colors.orange,
+      secondaryColor: Colors.orangeAccent,
+    ),
+    Project(
       title: "Socio".toUpperCase(),
       image: Image.asset('lib/assets/images/socio.png'),
       source: "https://github.com/ArinNigam/Socio",

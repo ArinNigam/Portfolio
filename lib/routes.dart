@@ -4,6 +4,7 @@ import 'package:portfolio/pages/Home/home_page.dart';
 import 'package:portfolio/pages/LaunchPage/launch_page.dart';
 import 'package:portfolio/pages/Projects/dsa_grind.dart';
 import 'package:portfolio/pages/Projects/socio.dart';
+import 'package:portfolio/pages/Projects/talawa.dart';
 import 'package:portfolio/pages/Projects/tic_tac_toe.dart';
 import 'package:portfolio/pages/Projects/weather_app.dart';
 import 'package:provider/provider.dart';
@@ -37,6 +38,12 @@ final GoRouter routes = GoRouter(
                   },
                 ),
             routes: [
+              GoRoute(
+                path: 'talawa',
+                pageBuilder: (context, state) => const MaterialPage(
+                  child: TalawaPage(),
+                ),
+              ),
               GoRoute(
                 path: 'socio',
                 pageBuilder: (context, state) => const MaterialPage(
