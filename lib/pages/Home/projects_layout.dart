@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:portfolio/pages/Techstacks/tech_list.dart';
 
+import 'project_list.dart';
 
-
-class TechStackPage extends StatelessWidget {
-  const TechStackPage({super.key});
+class ProjectPage extends StatelessWidget {
+  const ProjectPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +21,7 @@ class TechStackPage extends StatelessWidget {
             Padding(
               padding: EdgeInsets.only(left: width / 13.16),
               child: Text(
-                "Techstacks",
+                "Projects",
                 style: GoogleFonts.amaticSc(
                   fontSize: width / 24.675,
                   fontWeight: FontWeight.bold,
@@ -39,7 +38,7 @@ class TechStackPage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(20)),
                 margin: const EdgeInsets.symmetric(horizontal: 90),
                 padding: const EdgeInsets.only(top: 100, bottom: 100),
-                child: const TechstackList(),
+                child: const ProjectList(),
               ),
             ),
           ],

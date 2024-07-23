@@ -4,12 +4,12 @@ import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/pages/Home/home_intro.dart';
-import 'package:portfolio/pages/Home/home_tech.dart';
+import 'package:portfolio/pages/Home/techstack_layout.dart';
 import 'package:provider/provider.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
-import '../../providers/scroll_provider.dart';
-import 'home_projects.dart';
+import '../providers/scroll_provider.dart';
+import 'Home/projects_layout.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
