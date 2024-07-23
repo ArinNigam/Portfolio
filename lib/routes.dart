@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:portfolio/pages/Home/home_page.dart';
+import 'package:portfolio/pages/landing_page.dart';
 import 'package:portfolio/pages/LaunchPage/launch_page.dart';
 import 'package:portfolio/pages/Projects/dsa_grind.dart';
+import 'package:portfolio/pages/Projects/playpals.dart';
 import 'package:portfolio/pages/Projects/socio.dart';
 import 'package:portfolio/pages/Projects/talawa.dart';
 import 'package:portfolio/pages/Projects/tic_tac_toe.dart';
@@ -51,13 +52,21 @@ final GoRouter routes = GoRouter(
                 ),
               ),
               GoRoute(
-                  path: 'smart_insti',
-                  pageBuilder: (context, state) =>
-                      const MaterialPage(child: SmartInstiPage())),
+                path: 'smart_insti',
+                pageBuilder: (context, state) =>
+                    const MaterialPage(child: SmartInstiPage()),
+              ),
               GoRoute(
-                  path: 'cricstat',
-                  pageBuilder: (context, state) =>
-                      const MaterialPage(child: CricstatPage())),
+                path: 'playpals',
+                pageBuilder: (context, state) => const MaterialPage(
+                  child: PlaypalsPage(),
+                ),
+              ),
+              GoRoute(
+                path: 'cricstat',
+                pageBuilder: (context, state) =>
+                    const MaterialPage(child: CricstatPage()),
+              ),
               GoRoute(
                 path: 'chatconnect',
                 pageBuilder: (context, state) => const MaterialPage(

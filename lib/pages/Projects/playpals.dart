@@ -6,8 +6,8 @@ import 'package:provider/provider.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class TalawaPage extends StatelessWidget {
-  const TalawaPage({super.key});
+class PlaypalsPage extends StatelessWidget {
+  const PlaypalsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -31,30 +31,36 @@ class TalawaPage extends StatelessWidget {
             },
           ),
           title: const Text(
-            'Talawa',
+            'Playpals',
             style: TextStyle(color: Colors.black),
           ),
         ),
         body: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Center(
-            child: InkWell(
-              onTap: () async {
-                Uri url = Uri.parse(
-                    'https://drive.google.com/file/d/1d-ieSxLnRobTiqBaP1OPA20_AlH7toSO/view?usp=drive_link');
-                try {
-                  if (!await launchUrl(url)) {
-                    throw ('Error launching url');
-                  }
-                } catch (error) {
-                  Logger().e(error);
-                }
-              },
-              child: const Text(
-                'My GSoC\'24 Proposal',
-                style: TextStyle(
-                    color: Colors.blue, decoration: TextDecoration.underline),
-              ),
+            child: Column(
+              children: [
+                const SelectableText('Click Here to Watch the Demo'),
+                InkWell(
+                  onTap: () async {
+                    Uri url = Uri.parse(
+                        'https://www.loom.com/share/b63b7db3dec44fcea50398caf84b42f0');
+                    try {
+                      if (!await launchUrl(url)) {
+                        throw ('Error launching url');
+                      }
+                    } catch (error) {
+                      Logger().e(error);
+                    }
+                  },
+                  child: const Text(
+                    'Link',
+                    style: TextStyle(
+                        color: Colors.blue,
+                        decoration: TextDecoration.underline),
+                  ),
+                ),
+              ],
             ),
           ),
         ),

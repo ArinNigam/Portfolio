@@ -91,6 +91,17 @@ class ProjectPageProvider extends ChangeNotifier {
       secondaryColor: Colors.purpleAccent,
     ),
     Project(
+      title: "Playpals".toUpperCase(),
+      image: Image.asset('lib/assets/images/playpals.png'),
+      source: "https://github.com/shadab375/play_pals",
+      pagePath: '/home/playpals',
+      briefDescription: """Tinder for Gamers""",
+      description:
+          """It is a website made during the Quark 2024 (The Annual Tech Fest of BITS Goa). It connects gamers around the world having a user-friendly interface and mechanics of Tinder. This website aims to bring together gamers from diverse backgrounds, fostering a vibrant and inclusive community where users can find their perfect gaming partners based on shared interests, gaming preferences, and skill levels.""",
+      primaryColor: Colors.grey,
+      secondaryColor: Colors.grey[400]!,
+    ),
+    Project(
       title: "Cricstat".toUpperCase(),
       image: Image.asset('lib/assets/images/cricstat.png'),
       source: "https://github.com/ArinNigam/cricstat",
