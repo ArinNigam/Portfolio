@@ -2,8 +2,10 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
+import 'package:responsive_framework/responsive_framework.dart';
 
 import '../../providers/launch_page_animation.dart';
 
@@ -12,16 +14,16 @@ class LaunchPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double width = 900;
+    double width = 1978;
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       Provider.of<LaunchPageProvider>(context, listen: false).startAnimation();
     });
 
-    return SizedBox(
-      width: width,
+    return ResponsiveScaledBox(
+      width: 1978,
       child: Scaffold(
         body: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Expanded(
               flex: 2,
@@ -45,9 +47,9 @@ class LaunchPage extends StatelessWidget {
                                 children: [
                                   AutoSizeText(
                                     'Hello! My name is Arin',
-                                    style: TextStyle(
-                                        fontSize: width / 33,
-                                        fontFamily: 'Arial'),
+                                    style: GoogleFonts.gochiHand(
+                                      fontSize: width / 33,
+                                    ),
                                     minFontSize: 15,
                                   ),
                                   AnimatedTextKit(
@@ -89,10 +91,8 @@ class LaunchPage extends StatelessWidget {
                                     children: [
                                       AutoSizeText(
                                         'I do ',
-                                        style: TextStyle(
-                                            fontSize: width / 39.5,
-                                            fontFamily: 'Quicksand'),
-                                        minFontSize: 20,
+                                        style: GoogleFonts.gochiHand(
+                                            fontSize: width / 39.5),
                                       ),
                                       AnimatedTextKit(
                                         onFinished: () {
@@ -107,21 +107,18 @@ class LaunchPage extends StatelessWidget {
                                         animatedTexts: [
                                           RotateAnimatedText(
                                             'Development',
-                                            textStyle: TextStyle(
-                                                fontSize: width / 39.5,
-                                                fontFamily: 'Cambria'),
+                                            textStyle: GoogleFonts.gochiHand(
+                                                fontSize: width / 39.5),
                                             transitionHeight: 100,
                                           ),
                                           RotateAnimatedText('Coding',
-                                              textStyle: TextStyle(
-                                                  fontSize: width / 39.5,
-                                                  fontFamily: 'Cambria'),
+                                              textStyle: GoogleFonts.gochiHand(
+                                                  fontSize: width / 39.5),
                                               transitionHeight: 100),
                                           RotateAnimatedText('both!',
                                               rotateOut: false,
-                                              textStyle: TextStyle(
-                                                  fontSize: width / 39.5,
-                                                  fontFamily: 'Cambria'),
+                                              textStyle: GoogleFonts.gochiHand(
+                                                  fontSize: width / 39.5),
                                               transitionHeight: 100,
                                               duration: const Duration(
                                                   milliseconds: 500)),
@@ -147,11 +144,11 @@ class LaunchPage extends StatelessWidget {
             Expanded(
               child: Container(
                 color: Colors.white,
-                width: 200,
+                width: width / 2,
                 height: double.infinity,
                 alignment: Alignment.centerLeft,
                 child: SizedBox(
-                  height: 200,
+                  height: 500,
                   child: Lottie.asset(
                       'lib/assets/images/Animation - 1716380402174.json'),
                 ),
