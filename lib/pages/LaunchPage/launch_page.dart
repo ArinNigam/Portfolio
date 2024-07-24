@@ -18,6 +18,9 @@ class LaunchPage extends StatelessWidget {
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       Provider.of<LaunchPageProvider>(context, listen: false).startAnimation();
     });
+    Future<void> loadLottieAnimation() async {
+      await Future.delayed(const Duration(seconds: 2));
+    }
 
     return ResponsiveScaledBox(
       width: 1978,
@@ -149,7 +152,18 @@ class LaunchPage extends StatelessWidget {
                 alignment: Alignment.centerLeft,
                 child: SizedBox(
                   height: 500,
-                  child: Lottie.asset('lib/assets/images/animation.json'),
+                  child: FutureBuilder(
+                    future: loadLottieAnimation(),
+                    builder: (context, snapshot) {
+                      if (snapshot.connectionState == ConnectionState.waiting) {
+                        return const Center(child: CircularProgressIndicator());
+                      } else if (snapshot.hasError) {
+                        return const Center(child: Text('Failed to load animation'));
+                      } else {
+                        return Lottie.asset('lib/assets/images/animation.json');
+                      }
+                    },
+                  ),
                 ),
               ),
             )
