@@ -149,8 +149,7 @@ class LaunchPage extends StatelessWidget {
                 alignment: Alignment.centerLeft,
                 child: SizedBox(
                   height: 500,
-                  child: Lottie.asset(
-                      'lib/assets/images/Animation - 1716380402174.json'),
+                  child: Lottie.asset('lib/assets/images/animation.json'),
                 ),
               ),
             )
