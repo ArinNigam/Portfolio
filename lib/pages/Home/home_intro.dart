@@ -229,7 +229,7 @@ class HomeIntro extends StatelessWidget {
                         child: TextButton(
                           onPressed: () => Provider.of<ScrollProvider>(context,
                                   listen: false)
-                              .scrollToProjects(height + 20),
+                              .scrollToProjects(height + 100),
                           style: TextButton.styleFrom(
                             backgroundColor: const Color(0xFF0d1b2a),
                             padding: EdgeInsets.zero,
