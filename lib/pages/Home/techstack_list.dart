@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/providers/techstack_page_provider.dart';
@@ -27,8 +26,8 @@ class TechstackList extends StatelessWidget {
                   child: Container(
                     decoration: BoxDecoration(
                         gradient: const LinearGradient(colors: [
-                          Color(0xFF0077b6),
-                          Color(0xFF00b4d8),
+                          Color(0xFF1b1b1b),
+                          Color(0xFF3a3a3a),
                         ]),
                         color: Colors.black,
                         borderRadius: BorderRadius.circular(20)),
