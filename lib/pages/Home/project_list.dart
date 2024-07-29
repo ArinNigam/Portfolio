@@ -39,7 +39,7 @@ class ProjectList extends StatelessWidget {
               for (Project i in projectProvider.projects)
                 SizedBox(
                   width: width / 5.2,
-                  height: max(640, width / 2),
+                  height: max(640, width / 1.68),
                   child: Container(
                     decoration: BoxDecoration(
                         color: Colors.lightBlue[50],
@@ -63,6 +63,47 @@ class ProjectList extends StatelessWidget {
                                 fontWeight: FontWeight.bold),
                           ),
                         ),
+                        Stack(
+                          children: [
+                            Wrap(
+                              alignment: WrapAlignment.spaceEvenly,
+                              spacing: 8.0,
+                              runSpacing: 4.0,
+                              children: i.techStack.map((tech) {
+                                return SizedBox(
+                                  width: width / 19.4,
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                        gradient: const RadialGradient(colors: [
+                                          Color(0xFF1b1b1b),
+                                          Color(0xFF3a3a3a),
+                                        ]),
+                                        color: Colors.black,
+                                        borderRadius: BorderRadius.circular(8)),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              vertical: 8.0),
+                                          child: ClipRRect(
+                                            clipBehavior: Clip.antiAlias,
+                                            child: SizedBox(
+                                              width: 40,
+                                              height: 40,
+                                              child: tech.image,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                );
+                              }).toList(),
+                            )
+                          ],
+                        ),
                         Padding(
                           padding: const EdgeInsets.all(16.0),
                           child: Text(
@@ -74,11 +115,16 @@ class ProjectList extends StatelessWidget {
                         Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: SelectableText(
+                            focusNode: FocusNode(),
                             i.description,
                             style: GoogleFonts.sahitya(fontSize: width / 90),
                           ),
                         ),
-                        Expanded(
+                        const Expanded(
+                          child: SizedBox(),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(bottom: 16.0),
                           child: Align(
                             alignment: Alignment.center,
                             child: Row(

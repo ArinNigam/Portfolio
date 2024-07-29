@@ -24,8 +24,9 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => ScrollProvider()),
-        ChangeNotifierProvider(create: (_) => ProjectPageProvider(context)),
         ChangeNotifierProvider(create: (_) => TechStackPageProvider(context)),
+        ChangeNotifierProvider(
+            create: (context) => ProjectPageProvider(context)),
       ],
       child: MaterialApp.router(
         title: "Portfolio",
