@@ -141,18 +141,18 @@ class LaunchPage extends StatelessWidget {
                 ],
               ),
             ),
-            Expanded(
-              child: Container(
-                color: Colors.white,
-                width: width / 2,
-                height: double.infinity,
-                alignment: Alignment.centerLeft,
-                child: SizedBox(
-                  height: 500,
-                  child: Lottie.asset('lib/assets/images/animation.json'),
-                ),
-              ),
-            )
+            // Expanded(
+            //   child: Container(
+            //     color: Colors.white,
+            //     width: width / 2,
+            //     height: double.infinity,
+            //     alignment: Alignment.centerLeft,
+            //     child: SizedBox(
+            //       height: 500,
+            //       child: Lottie.asset('lib/assets/images/animation.json'),
+            //     ),
+            //   ),
+            // )
           ],
         ),
       ),
