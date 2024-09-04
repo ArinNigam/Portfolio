@@ -72,6 +72,18 @@ class ProjectPageProvider extends ChangeNotifier {
   void _initializeProjects() {
     projects = [
       Project(
+        title: "Portfolio".toUpperCase(),
+        image: Image.asset('lib/assets/images/portfolio1.png'),
+        source: "https://github.com/ArinNigam/Portfolio",
+        pagePath: '/home/portfolio',
+        briefDescription: 'Portfolio showcasing my skills',
+        description:
+            """This portfolio is a comprehensive showcase of my skills, projects, and experiences. It is designed to provide a detailed overview of my professional journey, highlighting key projects and accomplishments. It is Built using Flutter web, it demonstrates my proficiency in front-end and back-end development, as well as my ability to create responsive and user-friendly web applications.""",
+        primaryColor: Colors.red,
+        secondaryColor: Colors.redAccent,
+        techStack: _getTechstackList(['Dart', 'Flutter', 'Firebase']),
+      ),
+      Project(
         title: "Smart Insti".toUpperCase(),
         image: Image.asset('lib/assets/images/foss_overflow.png'),
         source: "https://github.com/OpenLake/Smart-Insti-App",

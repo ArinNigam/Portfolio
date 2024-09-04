@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:portfolio/pages/Projects/portfolio.dart';
 import 'package:portfolio/pages/landing_page.dart';
 import 'package:portfolio/pages/LaunchPage/launch_page.dart';
 import 'package:portfolio/pages/Projects/dsa_grind.dart';
@@ -39,6 +40,12 @@ final GoRouter routes = GoRouter(
                   },
                 ),
             routes: [
+              GoRoute(
+                path: 'portfolio',
+                pageBuilder: (context, state) => const MaterialPage(
+                  child: PortfolioPage(),
+                ),
+              ),
               GoRoute(
                 path: 'talawa',
                 pageBuilder: (context, state) => const MaterialPage(
