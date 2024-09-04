@@ -42,8 +42,7 @@ class PortfolioPage extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: SizedBox(
                     height: height,
-                    child: Image.asset(
-                        'lib/assets/projects_images/portfolio1.png',
+                    child: Image.asset('lib/assets/images/portfolio1.png',
                         fit: BoxFit.fitHeight),
                   ),
                 ),
@@ -51,8 +50,7 @@ class PortfolioPage extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: SizedBox(
                     height: height,
-                    child: Image.asset(
-                        'lib/assets/projects_images/portfolio2.png',
+                    child: Image.asset('lib/assets/images/portfolio2.png',
                         fit: BoxFit.fitHeight),
                   ),
                 )
