@@ -38,7 +38,7 @@ class ProjectList extends StatelessWidget {
             children: [
               for (Project i in projectProvider.projects)
                 SizedBox(
-                  width: width / 4.1,
+                  width: width / 5.2,
                   height: max(640, width / 1.68),
                   child: Container(
                     decoration: BoxDecoration(
