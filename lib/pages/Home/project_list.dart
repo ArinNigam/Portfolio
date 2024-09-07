@@ -111,7 +111,7 @@ class ProjectList extends StatelessWidget {
                             child: Text(
                               i.briefDescription.toUpperCase(),
                               style: GoogleFonts.sairaCondensed(
-                                  fontSize: width / 90),
+                                  fontSize: isMobile ? width / 60 : width / 90),
                             )),
                         Padding(
                           padding: const EdgeInsets.all(8.0),
