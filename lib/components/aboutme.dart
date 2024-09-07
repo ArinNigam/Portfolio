@@ -5,7 +5,8 @@ import 'package:google_fonts/google_fonts.dart';
 class AboutMe extends StatelessWidget {
   final bool isMobile;
   final double height;
-  const AboutMe({super.key, required this.isMobile, required this.height});
+  const AboutMe({Key? key, required this.isMobile, required this.height})
+      : super(key: key);
 
   Future<({String aboutMe, String education})> getMyInfo() async {
     String aboutMe =
@@ -25,7 +26,7 @@ class AboutMe extends StatelessWidget {
     return Container(
       margin: isMobile
           ? EdgeInsets.symmetric(vertical: height * 0.65)
-          : const EdgeInsets.only(top: 40, left: 1098, right: 20),
+          : EdgeInsets.only(top: 40, left: 1098, right: 20),
       padding: EdgeInsets.symmetric(
         horizontal: isMobile ? 20 : 80,
         vertical: isMobile ? 20 : 80,

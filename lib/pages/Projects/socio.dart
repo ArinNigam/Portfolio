@@ -36,59 +36,58 @@ class SocioPage extends StatelessWidget {
         ),
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 30.0),
-          child: ListView.builder(
-              scrollDirection: Axis.horizontal,
-              itemBuilder: (BuildContext context, _) {
-                return Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: SizedBox(
-                        height: height,
-                        child: Image.asset(
-                            'lib/assets/projects_images/socio/signup.png',
-                            fit: BoxFit.fitHeight),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: SizedBox(
-                        height: height,
-                        child: Image.asset(
-                            'lib/assets/projects_images/socio/login.png',
-                            fit: BoxFit.fitHeight),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: SizedBox(
-                        height: height,
-                        child: Image.asset(
-                            'lib/assets/projects_images/socio/home.png',
-                            fit: BoxFit.fitHeight),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: SizedBox(
-                        height: height,
-                        child: Image.asset(
-                            'lib/assets/projects_images/socio/update.png',
-                            fit: BoxFit.fitHeight),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: SizedBox(
-                        height: height,
-                        child: Image.asset(
-                            'lib/assets/projects_images/socio/chat.png',
-                            fit: BoxFit.fitHeight),
-                      ),
-                    ),
-                  ],
-                );
-              }),
+          child: SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: SizedBox(
+                    height: height,
+                    child: Image.asset(
+                        'lib/assets/projects_images/socio/signup.png',
+                        fit: BoxFit.fitHeight),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: SizedBox(
+                    height: height,
+                    child: Image.asset(
+                        'lib/assets/projects_images/socio/login.png',
+                        fit: BoxFit.fitHeight),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: SizedBox(
+                    height: height,
+                    child: Image.asset(
+                        'lib/assets/projects_images/socio/home.png',
+                        fit: BoxFit.fitHeight),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: SizedBox(
+                    height: height,
+                    child: Image.asset(
+                        'lib/assets/projects_images/socio/update.png',
+                        fit: BoxFit.fitHeight),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: SizedBox(
+                    height: height,
+                    child: Image.asset(
+                        'lib/assets/projects_images/socio/chat.png',
+                        fit: BoxFit.fitHeight),
+                  ),
+                ),
+              ],
+            ),
+          ),
         ),
       ),
     );
