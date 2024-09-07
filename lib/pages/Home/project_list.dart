@@ -25,6 +25,8 @@ class ProjectList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
+    bool isMobile =
+        MediaQuery.of(context).size.height > MediaQuery.of(context).size.width;
     width = width < 1200 ? 1200 : width;
 
     return Consumer<ProjectPageProvider>(
@@ -38,7 +40,7 @@ class ProjectList extends StatelessWidget {
             children: [
               for (Project i in projectProvider.projects)
                 SizedBox(
-                  width: width / 5.2,
+                  width: isMobile ? width / 3.1 : width / 4.1,
                   height: max(640, width / 1.68),
                   child: Container(
                     decoration: BoxDecoration(
@@ -105,20 +107,22 @@ class ProjectList extends StatelessWidget {
                           ],
                         ),
                         Padding(
-                          padding: const EdgeInsets.all(16.0),
-                          child: Text(
-                            i.briefDescription.toUpperCase(),
-                            style: GoogleFonts.sairaCondensed(
-                                fontSize: width / 90),
-                          ),
-                        ),
+                            padding: const EdgeInsets.all(16.0),
+                            child: Text(
+                              i.briefDescription.toUpperCase(),
+                              style: GoogleFonts.sairaCondensed(
+                                  fontSize: width / 90),
+                            )),
                         Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: SelectableText(
-                            focusNode: FocusNode(),
-                            i.description,
-                            style: GoogleFonts.sahitya(fontSize: width / 90),
-                          ),
+                          child: !isMobile
+                              ? SelectableText(
+                                  focusNode: FocusNode(),
+                                  i.description,
+                                  style:
+                                      GoogleFonts.sahitya(fontSize: width / 90),
+                                )
+                              : null,
                         ),
                         const Expanded(
                           child: SizedBox(),
@@ -135,8 +139,8 @@ class ProjectList extends StatelessWidget {
                                     shape: WidgetStateProperty.all<
                                         RoundedRectangleBorder>(
                                       RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(
-                                            10.0), // Adjust the radius as needed
+                                        borderRadius:
+                                            BorderRadius.circular(10.0),
                                       ),
                                     ),
                                     backgroundColor:
@@ -146,7 +150,6 @@ class ProjectList extends StatelessWidget {
                                         Size(width / 11, width / 35.4)),
                                   ),
                                   onPressed: () => context.go(i.pagePath),
-                                  //  style: OutlinedButton.styleFrom(fixedSize: Size(width / 11, width / 56.4)),
                                   child: Text(
                                     "Read more",
                                     style: GoogleFonts.sairaCondensed(
@@ -160,8 +163,8 @@ class ProjectList extends StatelessWidget {
                                     shape: WidgetStateProperty.all<
                                         RoundedRectangleBorder>(
                                       RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(
-                                            10.0), // Adjust the radius as needed
+                                        borderRadius:
+                                            BorderRadius.circular(10.0),
                                       ),
                                     ),
                                     backgroundColor:

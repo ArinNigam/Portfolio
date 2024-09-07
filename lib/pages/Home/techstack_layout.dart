@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:portfolio/pages/Home/techstack_list.dart';
+import 'techstack_list.dart'; // Assuming you have this file
 
 class TechStackPage extends StatelessWidget {
   const TechStackPage({super.key});
@@ -8,11 +8,12 @@ class TechStackPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
-    width = width < 1200 ? 1200 : width;
+    bool isMobile =
+        MediaQuery.of(context).size.height > MediaQuery.of(context).size.width;
 
     return Container(
       width: width,
-      padding: const EdgeInsets.only(top: 50, bottom: 50),
+      padding: const EdgeInsets.only(top: 25),
       child: IntrinsicHeight(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -22,21 +23,22 @@ class TechStackPage extends StatelessWidget {
               child: Text(
                 "Techstacks",
                 style: GoogleFonts.amaticSc(
-                  fontSize: width / 24.675,
+                  fontSize: isMobile ? width / 12 : width / 24.675,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-            ),
-            const SizedBox(
-              height: 50,
             ),
             IntrinsicHeight(
               child: Container(
                 decoration: BoxDecoration(
                     color: Colors.grey[100],
                     borderRadius: BorderRadius.circular(20)),
-                margin: const EdgeInsets.symmetric(horizontal: 90),
-                padding: const EdgeInsets.only(top: 100, bottom: 100),
+                margin: isMobile
+                    ? const EdgeInsets.symmetric(horizontal: 20)
+                    : const EdgeInsets.symmetric(horizontal: 90),
+                padding: isMobile
+                    ? const EdgeInsets.symmetric(vertical: 10)
+                    : const EdgeInsets.symmetric(vertical: 50),
                 child: const TechstackList(),
               ),
             ),

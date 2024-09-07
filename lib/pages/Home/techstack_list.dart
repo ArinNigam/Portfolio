@@ -9,7 +9,8 @@ class TechstackList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
-    width = width < 1200 ? 1200 : width;
+    bool isMobile =
+        MediaQuery.of(context).size.height > MediaQuery.of(context).size.width;
 
     return Consumer<TechStackPageProvider>(
       builder: (_, techstackProvider, __) {
@@ -22,7 +23,7 @@ class TechstackList extends StatelessWidget {
             children: [
               for (TechStack i in techstackProvider.techs)
                 SizedBox(
-                  width: width / 5.8,
+                  width: isMobile ? width / 2.5 : width / 5.8,
                   child: Container(
                     decoration: BoxDecoration(
                         gradient: const LinearGradient(colors: [
@@ -37,8 +38,8 @@ class TechstackList extends StatelessWidget {
                         ClipRRect(
                           clipBehavior: Clip.antiAlias,
                           child: SizedBox(
-                            width: 80,
-                            height: 80,
+                            width: isMobile ? 50 : 80,
+                            height: isMobile ? 50 : 80,
                             child: i.image,
                           ),
                         ),
@@ -51,7 +52,7 @@ class TechstackList extends StatelessWidget {
                           child: Text(
                             i.name,
                             style: GoogleFonts.xanhMono(
-                                fontSize: 35,
+                                fontSize: isMobile ? 15 : 35,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white),
                           ),
