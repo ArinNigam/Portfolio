@@ -4,8 +4,7 @@ class Photo extends StatelessWidget {
   final double size;
   final EdgeInsets margin;
 
-  const Photo({Key? key, required this.size, required this.margin})
-      : super(key: key);
+  const Photo({super.key, required this.size, required this.margin});
 
   @override
   Widget build(BuildContext context) {

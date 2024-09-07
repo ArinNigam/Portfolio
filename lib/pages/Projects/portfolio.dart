@@ -34,28 +34,34 @@ class PortfolioPage extends StatelessWidget {
           ),
         ),
         body: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 30.0),
-            child: SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(children: [
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: SizedBox(
-                    height: height,
-                    child: Image.asset('lib/assets/images/portfolio1.png',
-                        fit: BoxFit.fitHeight),
+          padding: const EdgeInsets.symmetric(horizontal: 30.0),
+          child: ListView.builder(
+            scrollDirection: Axis.horizontal,
+            itemBuilder: (BuildContext context, int index) {
+              Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: SizedBox(
+                      height: height,
+                      child: Image.asset('lib/assets/images/portfolio1.png',
+                          fit: BoxFit.fitHeight),
+                    ),
                   ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: SizedBox(
-                    height: height,
-                    child: Image.asset('lib/assets/images/portfolio2.png',
-                        fit: BoxFit.fitHeight),
-                  ),
-                )
-              ]),
-            )),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: SizedBox(
+                      height: height,
+                      child: Image.asset('lib/assets/images/portfolio2.png',
+                          fit: BoxFit.fitHeight),
+                    ),
+                  )
+                ],
+              );
+              return null;
+            },
+          ),
+        ),
       ),
     );
   }
