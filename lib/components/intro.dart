@@ -11,8 +11,7 @@ class Intro extends StatelessWidget {
   final double height;
   final bool isMobile;
 
-  const Intro({Key? key, required this.height, required this.isMobile})
-      : super(key: key);
+  const Intro({super.key, required this.height, required this.isMobile});
 
   void _redirectMyWhatsapp() async {
     String number = '917042052330';
@@ -187,8 +186,8 @@ class Intro extends StatelessWidget {
                     style: TextButton.styleFrom(
                       backgroundColor: const Color(0xFF0d1b2a),
                       padding: isMobile
-                          ? EdgeInsets.symmetric(horizontal: 10)
-                          : EdgeInsets.symmetric(horizontal: 40),
+                          ? const EdgeInsets.symmetric(horizontal: 10)
+                          : const EdgeInsets.symmetric(horizontal: 40),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10.0),
                       ),

@@ -1,9 +1,9 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
+import 'package:percent_indicator/percent_indicator.dart';
 import 'package:provider/provider.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
@@ -15,6 +15,9 @@ class LaunchPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double width = 1978;
+    bool isMobile =
+        MediaQuery.of(context).size.height > MediaQuery.of(context).size.width;
+
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       Provider.of<LaunchPageProvider>(context, listen: false).startAnimation();
     });
@@ -33,126 +36,143 @@ class LaunchPage extends StatelessWidget {
                   Expanded(
                     child: Container(
                       color: Colors.white,
-                      child: Row(
-                        children: [
-                          Expanded(
-                            flex: 2,
-                            child: Container(color: Colors.white),
-                          ),
-                          Expanded(
-                            flex: 4,
-                            child: Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Row(
-                                children: [
-                                  AutoSizeText(
-                                    'Hello! My name is Arin',
-                                    style: GoogleFonts.gochiHand(
-                                      fontSize: width / 33,
-                                    ),
-                                    minFontSize: 15,
-                                  ),
-                                  AnimatedTextKit(
-                                    repeatForever: true,
-                                    animatedTexts: [
-                                      TyperAnimatedText(
-                                        "...",
-                                        textStyle: TextStyle(
-                                            fontSize: width / 33,
-                                            fontFamily: 'Arial'),
-                                        speed:
-                                            const Duration(milliseconds: 500),
-                                      )
-                                    ],
-                                  ),
+                      child: Align(
+                        alignment: Alignment.bottomCenter,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              'Hello! My name is Arin',
+                              style: GoogleFonts.anekBangla(
+                                fontSize: isMobile ? width / 20 : width / 33,
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 30.0),
+                              child: AnimatedTextKit(
+                                repeatForever: true,
+                                animatedTexts: [
+                                  TyperAnimatedText(
+                                    "...",
+                                    textStyle: TextStyle(
+                                        fontSize:
+                                            isMobile ? width / 20 : width / 33,
+                                        fontFamily: 'Arial'),
+                                    speed: const Duration(milliseconds: 500),
+                                  )
                                 ],
                               ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
                   ),
                   Expanded(
-                    child: Row(
-                      children: [
-                        Expanded(
-                          flex: 1,
-                          child: Container(color: Colors.white),
-                        ),
-                        Expanded(
-                          child: Column(
+                    child: Container(
+                      color: Colors.white,
+                      child: Align(
+                        alignment: Alignment.topCenter,
+                        child: Container(
+                          color: Colors.white,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Expanded(
-                                flex: 2,
-                                child: Container(
-                                  color: Colors.white,
-                                  child: Row(
-                                    children: [
-                                      AutoSizeText(
-                                        'I do ',
-                                        style: GoogleFonts.gochiHand(
-                                            fontSize: width / 39.5),
-                                      ),
-                                      AnimatedTextKit(
-                                        onFinished: () {
-                                          Provider.of<LaunchPageProvider>(
-                                                  context,
-                                                  listen: false)
-                                              .incrementVisitorCount();
-                                          context.go('/home');
-                                        },
-                                        repeatForever: false,
-                                        isRepeatingAnimation: false,
-                                        animatedTexts: [
-                                          RotateAnimatedText(
-                                            'Development',
-                                            textStyle: GoogleFonts.gochiHand(
-                                                fontSize: width / 39.5),
-                                            transitionHeight: 100,
-                                          ),
-                                          RotateAnimatedText('Coding',
-                                              textStyle: GoogleFonts.gochiHand(
-                                                  fontSize: width / 39.5),
-                                              transitionHeight: 100),
-                                          RotateAnimatedText('both!',
-                                              rotateOut: false,
-                                              textStyle: GoogleFonts.gochiHand(
-                                                  fontSize: width / 39.5),
-                                              transitionHeight: 100,
-                                              duration: const Duration(
-                                                  milliseconds: 500)),
-                                        ],
-                                      ),
-                                    ],
-                                  ),
+                              Text(
+                                'I do ',
+                                style: GoogleFonts.anekBangla(
+                                  fontSize: isMobile ? width / 25 : width / 40,
                                 ),
                               ),
-                              Expanded(
-                                flex: 8,
-                                child: Container(color: Colors.white),
-                              )
+                              Stack(
+                                alignment: Alignment.centerLeft,
+                                children: [
+                                  AnimatedTextKit(
+                                    onFinished: () {
+                                      Provider.of<LaunchPageProvider>(context,
+                                              listen: false)
+                                          .incrementVisitorCount();
+                                      context.go('/home');
+                                    },
+                                    repeatForever: false,
+                                    isRepeatingAnimation: false,
+                                    animatedTexts: [
+                                      RotateAnimatedText(
+                                        'Coding',
+                                        textStyle: GoogleFonts.anekBangla(
+                                          fontSize: isMobile
+                                              ? width / 25
+                                              : width / 40,
+                                        ),
+                                        transitionHeight: 100,
+                                      ),
+                                      RotateAnimatedText('Development',
+                                          textStyle: GoogleFonts.anekBangla(
+                                            fontSize: isMobile
+                                                ? width / 25
+                                                : width / 40,
+                                          ),
+                                          transitionHeight: 100),
+                                      RotateAnimatedText('both!',
+                                          rotateOut: false,
+                                          textStyle: GoogleFonts.anekBangla(
+                                            fontSize: isMobile
+                                                ? width / 25
+                                                : width / 40,
+                                          ),
+                                          transitionHeight: 100,
+                                          duration: const Duration(
+                                              milliseconds: 500)),
+                                    ],
+                                  ),
+                                ],
+                              ),
                             ],
                           ),
                         ),
-                      ],
+                      ),
                     ),
                   )
                 ],
               ),
             ),
-            // Expanded(
-            //   child: Container(
-            //     color: Colors.white,
-            //     width: width / 2,
-            //     height: double.infinity,
-            //     alignment: Alignment.centerLeft,
-            //     child: SizedBox(
-            //       height: 500,
-            //       child: Lottie.asset('lib/assets/images/animation.json'),
-            //     ),
-            //   ),
-            // )
+            if (!isMobile)
+              Expanded(
+                child: Container(
+                  color: Colors.white,
+                  width: width / 2,
+                  height: double.infinity,
+                  alignment: Alignment.centerLeft,
+                  child: SizedBox(
+                    height: 500,
+                    child: Lottie.asset('lib/assets/images/animation.json'),
+                  ),
+                ),
+              )
+            else
+              Expanded(
+                child: Container(
+                  color: Colors.white,
+                  child: Align(
+                    alignment: Alignment.center,
+                    child: Consumer<LaunchPageProvider>(
+                      builder: (_, animationProvider, __) {
+                        return CircularPercentIndicator(
+                          addAutomaticKeepAlive: true,
+                          radius: 60,
+                          animation: true,
+                          animationDuration: 1000,
+                          lineWidth: 10,
+                          animateFromLastPercent: true,
+                          percent: animationProvider.percent,
+                          circularStrokeCap: CircularStrokeCap.butt,
+                          progressColor: Colors.blue,
+                        );
+                      },
+                    ),
+                  ),
+                ),
+              ),
           ],
         ),
       ),
