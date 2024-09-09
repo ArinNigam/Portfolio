@@ -14,22 +14,34 @@ class HomeIntro extends StatelessWidget {
     return Container(
       width: MediaQuery.of(context).size.width,
       height: isMobile ? 1098 * 1.2 : 1098,
-      decoration: const BoxDecoration(
-        gradient: LinearGradient(
-          begin: Alignment.centerLeft,
-          end: Alignment.centerRight,
-          colors: [
-            Color(0xFF03045e),
-            Color(0xFF0077b6),
-            Color(0xFF00b4d8),
-            Color(0xFF90e0ef),
-            Color(0xFFcaf0f8),
-          ],
-        ),
-        boxShadow: <BoxShadow>[
-          BoxShadow(color: Colors.black, offset: Offset(0.0, 0))
-        ],
-      ),
+      decoration: !isMobile
+          ? const BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.centerLeft,
+                end: Alignment.centerRight,
+                colors: [
+                  Color(0xFF03045e),
+                  Color(0xFF0077b6),
+                  Color(0xFF00b4d8),
+                  Color(0xFF90e0ef),
+                  Color(0xFFcaf0f8),
+                ],
+              ),
+              boxShadow: <BoxShadow>[
+                BoxShadow(color: Colors.black, offset: Offset(0.0, 0))
+              ],
+            )
+          : const BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: [
+                  Color(0xFF03045e),
+                  Color(0xFF0077b6),
+                  Color(0xFF00b4d8),
+                ],
+              ),
+            ),
       child: Stack(
         children: [
           if (!isMobile)

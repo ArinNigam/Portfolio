@@ -24,7 +24,7 @@ class Photo extends StatelessWidget {
         child: SizedBox(
           width: size,
           height: size,
-          child: Image.asset('lib/assets/images/profile_pic.png'),
+          child: Image.asset('lib/assets/images/profile_pic_2.png'),
         ),
       ),
     );

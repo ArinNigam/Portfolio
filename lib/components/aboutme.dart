@@ -37,24 +37,36 @@ class AboutMe extends StatelessWidget {
           horizontal: isMobile ? 20 : 60,
           vertical: isMobile ? 20 : 30,
         ),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20),
-          gradient: const LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: [
-                Color(0xFF03045e),
-                Color(0xFF0077b6),
-                Color(0xFF00b4d8),
-              ]),
-          boxShadow: const [
-            BoxShadow(
-              color: Colors.grey,
-              offset: Offset(0, 0),
-              blurRadius: 1.0,
-            ),
-          ],
-        ),
+        decoration: !isMobile
+            ? BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                gradient: const LinearGradient(
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                    colors: [
+                      Color(0xFF03045e),
+                      Color(0xFF0077b6),
+                      Color(0xFF00b4d8),
+                    ]),
+              )
+            : BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                gradient: const LinearGradient(
+                    begin: Alignment.centerLeft,
+                    end: Alignment.centerRight,
+                    colors: [
+                      Color.fromARGB(255, 0, 0, 0),
+                      Color.fromARGB(255, 35, 36, 37),
+                      Color.fromARGB(255, 41, 38, 38),
+                    ]),
+                boxShadow: const [
+                  BoxShadow(
+                    color: Colors.grey,
+                    offset: Offset(0, 0),
+                    blurRadius: 1.0,
+                  ),
+                ],
+              ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [

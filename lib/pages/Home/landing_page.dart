@@ -37,7 +37,7 @@ class HomePage extends StatelessWidget {
             automaticallyImplyLeading: false,
             elevation: isMobile ? 0 : 1,
             shadowColor: Colors.black,
-            backgroundColor: Colors.lightBlue,
+            backgroundColor: Colors.lightBlueAccent,
             toolbarHeight: scrollProvider.appBarHeight,
             leading: const Logo(),
             actions: [

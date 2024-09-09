@@ -91,47 +91,39 @@ class Intro extends StatelessWidget {
         children: [
           Text(
             'Hello,\nI am Arin Nigam',
-            style: GoogleFonts.zillaSlab(
+            style: GoogleFonts.amaranth(
               fontWeight: FontWeight.bold,
               color: Colors.white,
               textStyle: const TextStyle(fontWeight: FontWeight.bold),
               fontSize: isMobile ? 30 : 70,
-              shadows: [
-                const Shadow(
-                  offset: Offset(-1, 1),
-                  color: Colors.blueAccent,
-                  blurRadius: 10,
-                ),
-              ],
             ),
           ),
           Text(
             'I am a tech enthusiast about AI and Software Development',
-            style: GoogleFonts.bioRhyme(
-                fontWeight: FontWeight.bold,
-                fontSize: isMobile ? 20 : 30,
-                color: Colors.amberAccent,
-                shadows: [
-                  const Shadow(
-                    offset: Offset(-1, 1),
-                    color: Colors.blueAccent,
-                    blurRadius: 10,
-                  )
-                ]),
+            style: GoogleFonts.amaranth(
+              fontWeight: FontWeight.normal,
+              fontSize: isMobile ? 20 : 40,
+              color: Colors.amberAccent,
+            ),
           ),
           Container(
             margin: const EdgeInsets.only(top: 20),
             height: isMobile ? 50 : 100,
             width: isMobile ? double.infinity : 625,
-            decoration: BoxDecoration(
-                color: Colors.grey[300],
-                borderRadius: BorderRadius.circular(40)),
+            decoration: !isMobile
+                ? BoxDecoration(
+                    color: Colors.grey[300],
+                    borderRadius: BorderRadius.circular(40))
+                : BoxDecoration(
+                    color: const Color.fromARGB(255, 22, 22, 22),
+                    borderRadius: BorderRadius.circular(20)),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 IconButton(
                   onPressed: () => _redirectMyGithub(),
-                  icon: const Icon(LineIcons.github, color: Colors.black),
+                  icon: Icon(LineIcons.github,
+                      color: isMobile ? Colors.white : Colors.black),
                   iconSize: isMobile ? 30 : 45,
                 ),
                 IconButton(
