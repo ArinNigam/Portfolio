@@ -172,9 +172,10 @@ class Intro extends StatelessWidget {
                   width: 200,
                   height: isMobile ? 50 : 100,
                   child: TextButton(
-                    onPressed: () => Provider.of<ScrollProvider>(context,
-                            listen: false)
-                        .scrollToProjects(isMobile ? 1.04 * height : height),
+                    onPressed: () =>
+                        Provider.of<ScrollProvider>(context, listen: false)
+                            .scrollToProjects(
+                                isMobile ? 1.1 * height : height * 1.05),
                     style: TextButton.styleFrom(
                       backgroundColor: const Color(0xFF0d1b2a),
                       padding: isMobile

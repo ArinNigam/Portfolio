@@ -40,7 +40,7 @@ class TechstackList extends StatelessWidget {
                           child: SizedBox(
                             width: isMobile ? 50 : 80,
                             height: isMobile ? 50 : 80,
-                            child: i.image,
+                            child: TechStackWidget(techStack: i),
                           ),
                         ),
                         const SizedBox(
@@ -64,6 +64,31 @@ class TechstackList extends StatelessWidget {
             ],
           ),
         );
+      },
+    );
+  }
+}
+
+class TechStackWidget extends StatelessWidget {
+  final TechStack techStack;
+
+  const TechStackWidget({Key? key, required this.techStack}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return FutureBuilder(
+      future: precacheImage(techStack.image.image, context),
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.done) {
+          return techStack.image;
+        } else {
+          return Container(
+            width: 50,
+            height: 50,
+            color: Colors.grey,
+            child: Center(child: CircularProgressIndicator()),
+          );
+        }
       },
     );
   }

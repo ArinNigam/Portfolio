@@ -43,6 +43,7 @@ class TechStackPageProvider extends ChangeNotifier {
         image: Image.asset('lib/assets/icons/tailwind_css.png')),
     TechStack(
         name: 'MongoDB', image: Image.asset('lib/assets/icons/mongodb.png')),
+    TechStack(name: 'MySQL', image: Image.asset('lib/assets/icons/mysql.png')),
     TechStack(
         name: 'Express', image: Image.asset('lib/assets/icons/express.png')),
     TechStack(name: 'React', image: Image.asset('lib/assets/icons/react.png')),
@@ -61,6 +62,11 @@ class TechStackPageProvider extends ChangeNotifier {
     TechStack(name: 'Redis', image: Image.asset('lib/assets/icons/redis.png')),
     TechStack(
         name: 'GraphQL', image: Image.asset('lib/assets/icons/graphql.png')),
+    TechStack(
+        name: 'Docker', image: Image.asset('lib/assets/icons/docker.png')),
+    TechStack(name: 'Kafka', image: Image.asset('lib/assets/icons/kafka.png')),
+    TechStack(
+        name: 'RabbitMQ', image: Image.asset('lib/assets/icons/rabbitmq.png')),
     TechStack(name: 'Numpy', image: Image.asset('lib/assets/icons/numpy.png')),
     TechStack(
         name: 'MatPlotLib',
