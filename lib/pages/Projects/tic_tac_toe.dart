@@ -13,8 +13,10 @@ class TicTacToePage extends StatelessWidget {
     ScrollProvider scrollProvider =
         Provider.of<ScrollProvider>(context, listen: false);
     scrollProvider.appBarHeight = height / 13.15 < 60 ? 60 : height / 13.15;
+    bool isMobile =
+        MediaQuery.of(context).size.height > MediaQuery.of(context).size.width;
     return ResponsiveScaledBox(
-      width: 1048,
+      width: isMobile ? 455 : 1978,
       child: Scaffold(
         appBar: AppBar(
           automaticallyImplyLeading: false,
@@ -34,12 +36,18 @@ class TicTacToePage extends StatelessWidget {
           ),
         ),
         body: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 30.0),
+          padding: isMobile
+              ? const EdgeInsets.symmetric(horizontal: 0.0)
+              : const EdgeInsets.symmetric(horizontal: 30.0),
           child: SizedBox(
-            width: 2 * height,
+            width: double.infinity,
             height: height,
-            child: Image.asset('lib/assets/projects_images/tic_tac_toe.png',
-                fit: BoxFit.fill),
+            child: isMobile
+                ? Image.asset(
+                    'lib/assets/projects_images/tic_tac_toe.png',
+                  )
+                : Image.asset('lib/assets/projects_images/tic_tac_toe.png',
+                    fit: BoxFit.fill),
           ),
         ),
       ),

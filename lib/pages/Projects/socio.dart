@@ -9,13 +9,13 @@ class SocioPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double height = MediaQuery.of(context).size.height;
+    bool isMobile =
+        MediaQuery.of(context).size.height > MediaQuery.of(context).size.width;
     ScrollProvider scrollProvider =
         Provider.of<ScrollProvider>(context, listen: false);
-    scrollProvider.appBarHeight = height / 13.15 < 60 ? 60 : height / 13.15;
 
     return ResponsiveScaledBox(
-      width: 1048,
+      width: isMobile ? 455 : 1978,
       child: Scaffold(
         appBar: AppBar(
           automaticallyImplyLeading: false,
@@ -44,7 +44,7 @@ class SocioPage extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: SizedBox(
-                        height: height,
+                        height: isMobile ? 500 : 1000,
                         child: Image.asset(
                             'lib/assets/projects_images/socio/signup.png',
                             fit: BoxFit.fitHeight),
@@ -53,7 +53,7 @@ class SocioPage extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: SizedBox(
-                        height: height,
+                        height: isMobile ? 500 : 1000,
                         child: Image.asset(
                             'lib/assets/projects_images/socio/login.png',
                             fit: BoxFit.fitHeight),
@@ -62,7 +62,7 @@ class SocioPage extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: SizedBox(
-                        height: height,
+                        height: isMobile ? 500 : 1000,
                         child: Image.asset(
                             'lib/assets/projects_images/socio/home.png',
                             fit: BoxFit.fitHeight),
@@ -71,7 +71,7 @@ class SocioPage extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: SizedBox(
-                        height: height,
+                        height: isMobile ? 500 : 1000,
                         child: Image.asset(
                             'lib/assets/projects_images/socio/update.png',
                             fit: BoxFit.fitHeight),
@@ -80,7 +80,7 @@ class SocioPage extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: SizedBox(
-                        height: height,
+                        height: isMobile ? 500 : 1000,
                         child: Image.asset(
                             'lib/assets/projects_images/socio/chat.png',
                             fit: BoxFit.fitHeight),

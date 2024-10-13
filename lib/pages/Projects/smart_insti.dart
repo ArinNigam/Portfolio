@@ -12,10 +12,11 @@ class SmartInstiPage extends StatelessWidget {
     double height = MediaQuery.of(context).size.height;
     ScrollProvider scrollProvider =
         Provider.of<ScrollProvider>(context, listen: false);
-    scrollProvider.appBarHeight = height / 13.15 < 60 ? 60 : height / 13.15;
 
+    bool isMobile =
+        MediaQuery.of(context).size.height > MediaQuery.of(context).size.width;
     return ResponsiveScaledBox(
-      width: 1048,
+      width: isMobile ? 455 : 1978,
       child: Scaffold(
         appBar: AppBar(
           automaticallyImplyLeading: false,

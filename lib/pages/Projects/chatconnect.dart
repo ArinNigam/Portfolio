@@ -9,12 +9,13 @@ class ChatConnectPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double height = MediaQuery.of(context).size.height;
+    bool isMobile =
+        MediaQuery.of(context).size.height > MediaQuery.of(context).size.width;
     ScrollProvider scrollProvider =
         Provider.of<ScrollProvider>(context, listen: false);
-    scrollProvider.appBarHeight = height / 13.15 < 60 ? 60 : height / 13.15;
+    scrollProvider.appBarHeight = isMobile ? 40 : 80;
     return ResponsiveScaledBox(
-      width: 1048,
+      width: isMobile ? 455 : 1978,
       child: Scaffold(
         appBar: AppBar(
           automaticallyImplyLeading: false,
@@ -34,13 +35,18 @@ class ChatConnectPage extends StatelessWidget {
           ),
         ),
         body: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 30.0),
+          padding: isMobile
+              ? const EdgeInsets.symmetric(horizontal: 0)
+              : const EdgeInsets.symmetric(horizontal: 100.0),
           child: SizedBox(
-            width: double.infinity,
-            height: height,
-            child: Image.asset('lib/assets/projects_images/chat_connect.png',
-                fit: BoxFit.fill),
-          ),
+              width: isMobile ? 500 : double.infinity,
+              height: isMobile ? 500 : 800,
+              child: isMobile
+                  ? Image.asset(
+                      'lib/assets/projects_images/chat_connect.png',
+                    )
+                  : Image.asset('lib/assets/projects_images/chat_connect.png',
+                      fit: BoxFit.fill)),
         ),
       ),
     );
