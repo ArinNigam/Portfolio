@@ -131,18 +131,6 @@ class ProjectPageProvider extends ChangeNotifier {
         techStack: _getTechstackList(['MongoDB', 'Express', 'React', 'NodeJS']),
       ),
       Project(
-        title: "DSA Grind".toUpperCase(),
-        image: Image.asset('lib/assets/images/DSA.png'),
-        source: "https://github.com/ArinNigam/DSA-Grind",
-        pagePath: '/home/dsa_grind',
-        briefDescription: """Daily DSA Practice""",
-        description:
-            'DSA Grind is your go-to platform for mastering Data Structures and Algorithms through daily practice. With a wide range of questions and topics, It helps you build a strong foundation in DSA and ace your coding interviews. Whether you’re a beginner or an expert, It offers a variety of questions to challenge and enhance your problem-solving skills!',
-        primaryColor: Colors.teal,
-        secondaryColor: Colors.tealAccent,
-        techStack: _getTechstackList(['C++', 'Sublime Text', 'VS Code']),
-      ),
-      Project(
         title: "WebAppScaler".toUpperCase(),
         image: Image.asset('lib/assets/images/web_app_scale.png'),
         source: "https://github.com/ArinNigam/WebAppScaler",
@@ -150,7 +138,7 @@ class ProjectPageProvider extends ChangeNotifier {
         briefDescription:
             """Checking the Performance of Web Applications and Scaling""",
         description:
-            """It is a web application to check the performance of the web application and scale it accordingly. It is the demo for the importance of scaling the web applications when the traffic increases. """,
+            """It is a web application to check the performance of the and scale it accordingly. It is the demo for the importance of scaling the web applications when the traffic increases. """,
         primaryColor: Colors.grey,
         secondaryColor: Colors.grey[400]!,
         techStack: _getTechstackList([
