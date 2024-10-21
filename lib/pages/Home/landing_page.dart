@@ -303,16 +303,20 @@ class HomePage extends StatelessWidget {
                   : Container();
             },
           ),
-          body: SingleChildScrollView(
+          body: CustomScrollView(
             controller: scrollProvider.homeScrollController,
+            slivers: [
+              SliverToBoxAdapter(
+                child: HomeIntro(),
+              ),
+              SliverToBoxAdapter(
+                child: TechStackPage(),
+              ),
+              SliverToBoxAdapter(
+                child: ProjectPage(),
+              ),
+            ],
             scrollDirection: Axis.vertical,
-            child: const Column(
-              children: [
-                HomeIntro(),
-                TechStackPage(),
-                ProjectPage(),
-              ],
-            ),
           ),
         ));
   }
