@@ -14,8 +14,8 @@ class TechstackList extends StatelessWidget {
 
     return Consumer<TechStackPageProvider>(
       builder: (_, techstackProvider, __) {
-        return Stack(children: [
-          Wrap(
+        return SizedBox.expand(
+          child: Wrap(
             alignment: WrapAlignment.spaceEvenly,
             direction: Axis.horizontal,
             runAlignment: WrapAlignment.spaceEvenly,
@@ -23,7 +23,7 @@ class TechstackList extends StatelessWidget {
             children: [
               for (TechStack i in techstackProvider.techs)
                 SizedBox(
-                  width: isMobile ? width / 2.5 : width / 5.8,
+                  width: isMobile ? width / 5.1 : width / 5.8,
                   child: Container(
                     decoration: BoxDecoration(
                         gradient: const LinearGradient(colors: [
@@ -32,19 +32,18 @@ class TechstackList extends StatelessWidget {
                         ]),
                         color: Colors.black,
                         borderRadius: BorderRadius.circular(20)),
-                    child: Row(
+                    child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
+                        const SizedBox(
+                          height: 20,
+                        ),
                         ClipRRect(
                           clipBehavior: Clip.antiAlias,
                           child: SizedBox(
-                            width: isMobile ? 50 : 80,
                             height: isMobile ? 50 : 80,
                             child: TechStackWidget(techStack: i),
                           ),
-                        ),
-                        const SizedBox(
-                          width: 20,
                         ),
                         Align(
                           heightFactor: 2,
@@ -63,7 +62,7 @@ class TechstackList extends StatelessWidget {
                 ),
             ],
           ),
-        ]);
+        );
       },
     );
   }
