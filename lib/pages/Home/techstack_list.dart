@@ -14,8 +14,8 @@ class TechstackList extends StatelessWidget {
 
     return Consumer<TechStackPageProvider>(
       builder: (_, techstackProvider, __) {
-        return SizedBox.expand(
-          child: Wrap(
+        return Stack(children: [
+          Wrap(
             alignment: WrapAlignment.spaceEvenly,
             direction: Axis.horizontal,
             runAlignment: WrapAlignment.spaceEvenly,
@@ -63,7 +63,7 @@ class TechstackList extends StatelessWidget {
                 ),
             ],
           ),
-        );
+        ]);
       },
     );
   }

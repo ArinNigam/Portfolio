@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'techstack_list.dart'; // Assuming you have this file
+import 'techstack_list.dart';
 
 class TechStackPage extends StatelessWidget {
   const TechStackPage({super.key});
