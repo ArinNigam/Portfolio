@@ -18,12 +18,11 @@ class TechstackList extends StatelessWidget {
           child: Wrap(
             alignment: WrapAlignment.spaceEvenly,
             direction: Axis.horizontal,
-            runAlignment: WrapAlignment.spaceEvenly,
             runSpacing: width / 48.3,
             children: [
               for (TechStack i in techstackProvider.techs)
                 SizedBox(
-                  width: isMobile ? width / 5.1 : width / 5.8,
+                  width: isMobile ? width / 4.2 : width / 5.8,
                   child: Container(
                     decoration: BoxDecoration(
                         gradient: const LinearGradient(colors: [
@@ -51,7 +50,7 @@ class TechstackList extends StatelessWidget {
                           child: Text(
                             i.name,
                             style: GoogleFonts.xanhMono(
-                                fontSize: isMobile ? 15 : 35,
+                                fontSize: isMobile ? 12 : 30,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white),
                           ),

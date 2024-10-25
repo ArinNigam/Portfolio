@@ -131,12 +131,23 @@ class ProjectPageProvider extends ChangeNotifier {
         techStack: _getTechstackList(['MongoDB', 'Express', 'React', 'NodeJS']),
       ),
       Project(
+        title: "Playpals".toUpperCase(),
+        image: Image.asset('lib/assets/images/playpals.png'),
+        source: "https://github.com/shadab375/play_pals",
+        pagePath: '/home/playpals',
+        briefDescription: """Tinder for Gamers""",
+        description:
+            """It is a website made during the Quark 2024 (The Annual Tech Fest of BITS Goa). It connects gamers around the world having a user-friendly interface and mechanics of Tinder. This website aims to bring together gamers from diverse backgrounds, fostering a vibrant and inclusive community where users can find their perfect gaming partners based on shared interests, gaming preferences, and skill levels.""",
+        primaryColor: Colors.grey,
+        secondaryColor: Colors.grey[400]!,
+        techStack: _getTechstackList(['MongoDB', 'Express', 'React', 'NodeJS']),
+      ),
+      Project(
         title: "WebAppScaler".toUpperCase(),
         image: Image.asset('lib/assets/images/web_app_scale.png'),
         source: "https://github.com/ArinNigam/WebAppScaler",
         pagePath: '/home',
-        briefDescription:
-            """Checking the Performance of Web Applications and Scaling""",
+        briefDescription: """Microservices Performance""",
         description:
             """It is a web application to check the performance of the and scale it accordingly. It is the demo for the importance of scaling the web applications when the traffic increases. """,
         primaryColor: Colors.grey,

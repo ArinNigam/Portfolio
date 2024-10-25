@@ -14,36 +14,33 @@ class TechStackPage extends StatelessWidget {
     return Container(
       width: width,
       padding: const EdgeInsets.only(top: 25),
-      child: IntrinsicHeight(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Padding(
-              padding: EdgeInsets.only(left: width / 13.16),
-              child: Text(
-                "Techstacks",
-                style: GoogleFonts.amaticSc(
-                  fontSize: isMobile ? width / 12 : width / 24.675,
-                  fontWeight: FontWeight.bold,
-                ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: EdgeInsets.only(left: width / 13.16),
+            child: Text(
+              "Techstacks",
+              style: GoogleFonts.amaticSc(
+                fontSize: isMobile ? width / 12 : width / 24.675,
+                fontWeight: FontWeight.bold,
               ),
             ),
-            IntrinsicHeight(
-              child: Container(
-                decoration: BoxDecoration(
-                    color: Colors.grey[100],
-                    borderRadius: BorderRadius.circular(20)),
-                margin: isMobile
-                    ? const EdgeInsets.symmetric(horizontal: 20)
-                    : const EdgeInsets.symmetric(horizontal: 90),
-                padding: isMobile
-                    ? const EdgeInsets.symmetric(vertical: 10)
-                    : const EdgeInsets.symmetric(vertical: 50),
-                child: const TechstackList(),
-              ),
-            ),
-          ],
-        ),
+          ),
+          Container(
+            height: isMobile ? 1275 : 1650,
+            decoration: BoxDecoration(
+                color: Colors.grey[100],
+                borderRadius: BorderRadius.circular(20)),
+            margin: isMobile
+                ? const EdgeInsets.symmetric(horizontal: 20)
+                : const EdgeInsets.symmetric(horizontal: 90),
+            padding: isMobile
+                ? const EdgeInsets.symmetric(vertical: 10)
+                : const EdgeInsets.symmetric(vertical: 50),
+            child: const TechstackList(),
+          ),
+        ],
       ),
     );
   }
